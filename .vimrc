@@ -1,4 +1,5 @@
 set nocompatible
+set nobackup
 
 set nu
 set ruler
