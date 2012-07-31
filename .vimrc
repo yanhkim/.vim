@@ -13,6 +13,7 @@ set smartindent
 
 set hlsearch
 set incsearch
+set clipboard=unnamed
 
 filetype on
 syntax on
