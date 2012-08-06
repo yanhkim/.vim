@@ -18,12 +18,11 @@ set clipboard=unnamed
 filetype on
 syntax on
 
+" status line setting
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set laststatus=2
 
-au BufRead,BufNewFile *.json set filetype=json
-au! Syntax json source ~/.vim/ftplugin/json.vim
-
+" BOM detect
 if has("multi_byte")
     if &termencoding == ""
         let &termencoding = &encoding
@@ -33,5 +32,3 @@ if has("multi_byte")
     "setglobal bomb
     set fileencodings=ucs-bom,utf-8,latin1
 endif
-
-call pathogen#infect()
