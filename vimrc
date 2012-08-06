@@ -15,10 +15,12 @@ set hlsearch
 set incsearch
 set clipboard=unnamed
 
-filetype off        " required for vundle
 syntax on
 
-" vundle package manager settings
+" vundle package manager settings {{{
+"
+filetype off                    " required
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -36,7 +38,9 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'ack.vim'
 Bundle 'jade.vim'
 
-filetype plugin indent on     " required for vundle
+filetype plugin indent on       " required
+"
+" endof vundle package manager settings }}}
 
 " status line setting
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
