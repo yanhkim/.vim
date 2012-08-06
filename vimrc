@@ -26,6 +26,16 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+" vim-scripts repos
+Bundle 'ack.vim'
+Bundle 'jade.vim'
+
 filetype plugin indent on     " required for vundle
 
 " status line setting
