@@ -15,8 +15,18 @@ set hlsearch
 set incsearch
 set clipboard=unnamed
 
-filetype on
+filetype off        " required for vundle
 syntax on
+
+" vundle package manager settings
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on     " required for vundle
 
 " status line setting
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
