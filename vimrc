@@ -34,11 +34,11 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'mileszs/ack.vim'
 " vim-scripts repos
-Bundle 'ack.vim'
 Bundle 'jade.vim'
 
-filetype plugin indent on       " required
+filetype plugin on       " required
 "
 " endof vundle package manager settings }}}
 
