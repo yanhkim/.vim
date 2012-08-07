@@ -1,24 +1,6 @@
-set nocompatible
-set nobackup
-
-set nu
-set ruler
-
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-
-set smartindent
-
-set hlsearch
-set incsearch
-set clipboard=unnamed
-
-syntax on
-
 " vundle package manager settings {{{
 "
+set nocompatible
 filetype off                    " required
 
 set rtp+=~/.vim/bundle/vundle/
@@ -41,6 +23,25 @@ Bundle 'jade.vim'
 filetype plugin on       " required
 "
 " endof vundle package manager settings }}}
+
+" general settings
+set nobackup
+
+set nu
+set ruler
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set smartindent
+
+set hlsearch
+set incsearch
+set clipboard=unnamed
+
+syntax on
 
 " status line setting
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
