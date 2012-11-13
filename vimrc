@@ -40,6 +40,8 @@ set smartindent
 set hlsearch
 set incsearch
 set clipboard=unnamed
+set backspace=indent,eol,start
+colorscheme delek
 
 syntax on
 
