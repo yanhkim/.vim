@@ -17,6 +17,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
+Bundle 'tristen/vim-sparkup'
 " vim-scripts repos
 Bundle 'jade.vim'
 
@@ -33,7 +34,7 @@ set ruler
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+"set expandtab
 
 set smartindent
 
@@ -59,3 +60,13 @@ if has("multi_byte")
     "setglobal bomb
     set fileencodings=ucs-bom,utf-8,latin1
 endif
+
+" turn off search highlights
+nmap <silent> <C-H> :nohlsearch<CR>
+
+function ToggleNERDTree()
+    execute ":NERDTreeToggle"
+endfunction
+command -nargs=0 ToggleNERDTree :call ToggleNERDTree()
+
+nmap <ESC>t :ToggleNERDTree<CR>
