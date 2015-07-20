@@ -3,25 +3,30 @@
 set nocompatible
 filetype off                    " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
+" My Plugins here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'mileszs/ack.vim'
-Bundle 'tristen/vim-sparkup'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mileszs/ack.vim'
+Plugin 'tristen/vim-sparkup'
 " vim-scripts repos
-Bundle 'jade.vim'
+Plugin 'jade.vim'
+Plugin 'groenewege/vim-less'
+Plugin 'cakebaker/scss-syntax.vim'
 
-filetype plugin on       " required
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 "
 " endof vundle package manager settings }}}
 
@@ -31,9 +36,9 @@ set nobackup
 set nu
 set ruler
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set smartindent
