@@ -7,12 +7,14 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'tristen/vim-sparkup'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'jade.vim'
 Plug 'groenewege/vim-less'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
+Plug 'Quramy/tsuquyomi', {'for': 'typescript'}
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 filetype plugin indent on
@@ -51,9 +53,20 @@ if has("multi_byte")
 endif
 
 " NERDTree settings
-" \F to :NERDTreeToggle, \f to :NERDTreeFind
+"" \F to :NERDTreeToggle, \f to :NERDTreeFind
 nmap <silent> <leader>f <ESC>:NERDTreeFind<CR>
 nmap <silent> <leader>F <ESC>:NERDTreeToggle<CR>
+
+" vim-easy-align settings
+"" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+"" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" ack.vim settings
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 " set filetype for jsfl
 autocmd BufNewFile,BufRead *.jsfl setlocal filetype=javascript
