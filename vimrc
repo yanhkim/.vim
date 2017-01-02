@@ -18,6 +18,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'mileszs/ack.vim'
 Plugin 'tristen/vim-sparkup'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'clausreinke/typescript-tools.vim'
 " vim-scripts repos
 Plugin 'jade.vim'
 Plugin 'groenewege/vim-less'
@@ -47,7 +49,7 @@ set hlsearch
 set incsearch
 set clipboard=unnamed
 set backspace=indent,eol,start
-colorscheme delek
+" colorscheme delek
 
 syntax on
 
@@ -75,3 +77,6 @@ endfunction
 command -nargs=0 ToggleNERDTree :call ToggleNERDTree()
 
 nmap <ESC>t :ToggleNERDTree<CR>
+
+" set filetype for jsfl
+autocmd BufNewFile,BufRead *.jsfl setlocal filetype=javascript
