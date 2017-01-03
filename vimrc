@@ -1,5 +1,6 @@
 " vim.plug settings
 call plug#begin()
+Plug 'vim-airline'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -38,8 +39,8 @@ colorscheme darkblue
 syntax on
 
 " status line setting
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
-set laststatus=2
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set laststatus=2
 
 " BOM detect
 if has("multi_byte")
@@ -67,6 +68,11 @@ nmap ga <Plug>(EasyAlign)
 if executable('ag')
   let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
+
+" vim-airline settings
+let g:airline#extensions#tabline#enabled=1      " 탭 사용시 상단에 탭목록 표시
+let g:airline#extensions#tabline#tab_nr_type=1  " 탭 번호를 표시
+let g:airline#extensions#tabline#fnamemod=':t'  " 탭 제목에 파일이름만 표시
 
 " set filetype for jsfl
 autocmd BufNewFile,BufRead *.jsfl setlocal filetype=javascript

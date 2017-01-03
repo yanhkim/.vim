@@ -6,6 +6,5 @@ Download and link configuration file:
 $ git clone git://github.com/yanhkim/.vim.git ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 $ cd ~/.vim
-$ git submodule init; git submodule update
-$ vim +BundleInstall +qall
+$ vim +PlugInstall +qall
 </pre>
