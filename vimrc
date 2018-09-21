@@ -17,6 +17,9 @@ Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'Quramy/tsuquyomi', {'for': 'typescript'}
 Plug 'junegunn/vim-easy-align'
 Plug 'altercation/vim-colors-solarized'
+Plug 'posva/vim-vue'
+Plug 'othree/yajs.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 filetype plugin indent on
@@ -26,15 +29,18 @@ set nobackup
 
 set nu
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
+set autoindent
 set smartindent
 
 set hlsearch
 set clipboard=unnamed
+
+set hidden
 
 syntax enable
 if has('gui_running')
