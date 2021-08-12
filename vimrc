@@ -1,6 +1,6 @@
 " vim.plug settings
 call plug#begin()
-Plug 'vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -9,7 +9,7 @@ Plug 'mileszs/ack.vim'
 Plug 'tristen/vim-sparkup'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'jade.vim'
+" Plug 'jade.vim'
 Plug 'groenewege/vim-less'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
